@@ -1,3 +1,83 @@
 #map {
     height: 250px;
+    z-index: 1;
+    min-height: 100vh;
+}
+
+#ip-bar {
+    display: inline-block;
+    position:relative;
+
+left: 50%;
+  transform: translateX(-50%);
+width:40%;
+padding:10px;
+height:16px;
+
+}
+
+#banner {
+    width:100vw;
+    position:relative;
+}
+
+h2 {
+      left: 50%;
+  transform: translateX(-50%);
+    position:relative;
+    display: inline-block;
+   bottom:330px;
+    color:whitesmoke;
+    z-index: 2;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+}
+
+.flex {
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#arrow {
+    position: relative;
+    z-index: 3;
+    height:50px;
+    width:50px;
+  
+}
+
+#arrow-container {
+    height:16px;
+    width:16px;
+  background-color: rgb(59, 59, 59);
+    border-radius: 10%;;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    align-items: flex-start; /* Aligns content to the top */
+  }
+}
+
+#info {
+    height:100px;
+    border: black solid 1px;
+    border-radius: 5px;
+  
+}
+
+.card {
+    padding:10px;
+     
+    
+}
+
+.vl {
+ border-right: gray solid 2px;
+ height: 50px;
+ position: relative;
+ left:calc(100vw/16)
 }

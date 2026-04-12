@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
       <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
+     <script src="./script.js" defer></script>
   <title>Frontend Mentor | IP Address Tracker</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -20,22 +22,48 @@
   </style>
 </head>
 <body>
-
+  <img id ="banner" src ="./images/pattern-bg-desktop.png">
+<h2>
   IP Address Tracker
+</h2>
+<div class = "flex">
+<input placeholder="Search for any IP address or domain" type ="text" id ="ip-bar">
+<div id ="arrow-container">
+<img id="arrow" src="./images/icon-arrow.svg">
+</div>
+</div>
+<div id = "info" class="flex">
+<div class = "card">
+<p>Ip Address</p>
 
-  Search for any IP address or domain
+<div class ="vl"></div>
+</div>
+<div class = "card">
+<p>Location</p>
+
+<div class ="vl"></div>
+</div>
+<div class = "card">
+<p>Timezone</p>
+
+<div class ="vl"></div>
+</div>
+<div class = "card">
+ISP
+
+
+</div>
+</div>
+  <!-- Search for any IP address or domain
 
   IP Address
   Location
   Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
+    UTC  add offset value dynamically using the API -->
+  <!-- ISP -->
   <div id ="map">
-    
+
   </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+
 </body>
 </html>
