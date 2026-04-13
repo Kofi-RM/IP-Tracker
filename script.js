@@ -28,15 +28,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // set map default
 
-async function getIp() {
+async function getIp(searchIp = "") {
 
-    let response = await fetch("https://geo.ipify.org/api/v2/country,city?apiKey=at_iQNiAqmMttP2ybQTj2MVnSvCwUDrA");
+    let response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_iQNiAqmMttP2ybQTj2MVnSvCwUDrA&ipAddress=${searchIp}`);
 
 let results = await response.json();
 
 ipInfo = results.ip;
-// console.log(results.ip)
-// console.log(results);
 return results;
 } // returns info from request IP
 
