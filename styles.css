@@ -116,6 +116,33 @@ text-align: center;
   border-right: none;
 }
 
+#error-text {
+    color:red;
+}
+
+#error-popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background-color: #ff4d4d;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+#error-popup.show {
+  opacity: 1;
+}
 @media screen and (max-width: 768px) {
   body {
     align-items: flex-start; /* Aligns content to the top */
