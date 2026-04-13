@@ -1,3 +1,21 @@
+h1 {
+   
+display: block;
+margin: 10px auto;
+  color: whitesmoke;
+  font-size: 2.5rem;
+}
+
+body {
+    font-family:'Rubik', sans-serif;
+    margin:0;
+}
+
+p {
+    font-weight: 500;
+    color:gray
+}
+
 #map {
     position: relative;
     height: 75vh;
@@ -22,27 +40,6 @@ font-size: 1.45rem;
 }
 #hero-section {
   position: relative;
-}
-h1 {
-   
-display: block;
-margin: 10px auto;
-  color: whitesmoke;
-  font-size: 2.5rem;
-}
-
-body {
-    font-family:'Rubik', sans-serif;
-    margin:0;
-}
-
-p {
-    font-weight: 500;
-    color:gray
-}
-.flex {
-    display:flex;
-    justify-content: space-around;
 }
 
 #input {
@@ -110,6 +107,7 @@ display: flex;
 
   z-index: 10;
 }
+
 .card {
     flex: 1;
   padding: 10px;
@@ -143,7 +141,7 @@ text-align: center;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index: 9999;
+  z-index: 3;
 }
 
 #error-popup.show {

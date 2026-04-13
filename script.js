@@ -82,7 +82,7 @@ try {
     isp.textContent = results.isp;
     lat = results.location.lat;
     long = results.location.lng;
-
+    // set values if valid input
     
 map.setView([lat, long],13)
 L.marker([lat, long]).addTo(map);
@@ -93,12 +93,13 @@ showError(error.message);
     locat.textContent = "N/A";;
     timezone.textContent = "N/A";;
     isp.textContent = "N/A";
-
+    // set values on error
     return;
 }
 
 }
-    submit.addEventListener("click", () => {
+    submit.addEventListener("click", (e) => {
+         e.preventDefault();
         console.log(ipBar.value)
         const searchValue = ipBar.value;
         searchIp(searchValue);
