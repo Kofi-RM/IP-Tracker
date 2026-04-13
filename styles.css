@@ -10,6 +10,7 @@
    flex:1;
 height:50px;
 text-align: center;
+font-size: 1.45rem;
 
 }
 
@@ -19,10 +20,8 @@ text-align: center;
   object-fit: cover;
   display: block;
 }
-#h2-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
+#hero-section {
+  position: relative;
 }
 h1 {
    
@@ -73,14 +72,21 @@ width: 80%;
 }
 
 #submit-btn {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-        height:56px;
-    width:56px;
+display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 56px;
+  width: 56px;
+
   background-color: rgb(59, 59, 59);
-    border-top-right-radius:50% ;
-    border-bottom-right-radius:50% ;
+
+  border: none;              
+  padding: 0;               
+  cursor: pointer;
+
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
 
 #submit-btn:hover {
@@ -143,6 +149,19 @@ text-align: center;
 #error-popup.show {
   opacity: 1;
 }
+
+.sr-only {
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0,0,0,0);
+white-space: nowrap;
+border: 0;
+}
+
 @media screen and (max-width: 768px) {
   body {
     align-items: flex-start; /* Aligns content to the top */

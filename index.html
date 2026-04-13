@@ -1,81 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+ <html lang="en"> 
+  <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> <link rel="stylesheet" href="styles.css"> 
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/> <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> <script src="./script.js" defer></script>
+      <title>IP Address Tracker
 
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
-     <script src="./script.js" defer></script>
-  <title>Frontend Mentor | IP Address Tracker</title>
+      </title>
+     </head> 
+     <body> 
+      <header id="hero-section"> 
+        <img id="banner" src="./images/pattern-bg-desktop.png" alt="Blue background with street lines in a lighter blue" aria-hidden="true">
+         <div id="hero"> <h1>IP Address Tracker</h1> <form id="input" role="search" aria-label="Search IP address or domain"> 
+          <label for="ip-bar" class="sr-only"> Search for IP address or domain </label> 
+          <input id="ip-bar" type="text" placeholder="Search for any IP address or domain"aria-describedby="search-help"> 
+          <button id="submit-btn" type="submit" aria-label="Search IP address"> 
+            <img id="arrow" src="./images/icon-arrow.svg" alt="" aria-hidden="true">
+           </button> 
+          </form> 
+          <span id="search-help" class="sr-only"> Enter an IP address or domain name and press search </span> 
+        </div> 
+        <div id="error-popup" role="alert"> 
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <div id="h2-container">
-  <img id ="banner" src ="./images/pattern-bg-desktop.png">
-  <div id="hero">
-  <h1>
-  IP Address Tracker
-</h1>
-<div id="input">
-<input placeholder="Search for any IP address or domain" type ="text" id ="ip-bar">
-<div id ="submit-btn">
-<img id="arrow" src="./images/icon-arrow.svg">
+         </div> 
+         <section id="info" class="flex" aria-label="IP Address Information">
+           <div class="card">
+             <h2>IP Address</h2> 
+             <p id="ip" aria-live="polite"></p> 
+            </div> <div class="card"> 
+              <h2>Location</h2> 
+              <p id="location" aria-live="polite"></p> 
+            </div> <div class="card"> 
+              <h2>Timezone</h2>
+               <p id="timezone" aria-live="polite"></p> 
+              </div> 
+              <div class="card"> 
+                <h2>ISP</h2>
+                 <p id="isp" aria-live="polite">
 
-</div>
-</div>
+                 </p> 
+                </div> 
+              </section> 
+            </header> 
+            <main> 
+              <section id="map" aria-label="Map showing IP address location"> 
 
-</div>
-<div id ="error-popup">
-
-</div>
-<div id = "info" class="flex">
-<div class = "card">
-<p>IP Address</p>
-<h3 id="ip"></h3>
-
-</div>
-<div class = "card">
-<p>Location</p>
-<h3 id="location"></h3>
-
-</div>
-<div class = "card">
-<p>Timezone</p>
-<h3 id="timezone"></h3>
-
-</div>
-<div class = "card">
-<p>ISP</p>
-<h3 id ="isp"></h3>
-
-</div>
-</div>
-
-</div> 
-
-  <!-- Search for any IP address or domain
-
-  IP Address
-  Location
-  Timezone
-    UTC  add offset value dynamically using the API -->
-  <!-- ISP -->
-  <div id ="map">
-
-  </div>
-
-</body>
-</html>
+     </section> 
+    </main> 
+  </body> 
+  </html>
