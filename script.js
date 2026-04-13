@@ -74,7 +74,7 @@ try {
 
     console.log(results);
 
-    if (results.code || !results.location) throw new Error("Invalid IP Address or Domain")
+    if (results.code || !results.location) throw new Error("Invalid IP Address or Domain") // throw error and move to catch
       
         ip.textContent = results.ip;
     locat.textContent = results.location?.city + ", " + results.location.region + " " + results.location.postalCode;
