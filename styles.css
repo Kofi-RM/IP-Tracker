@@ -1,8 +1,9 @@
 #map {
     position: relative;
-    height: 250px;
+    height: 50vh;
     z-index: 1;
-    min-height: 50vh;
+    width:100%;
+    
 }
 
 #ip-bar {
@@ -14,7 +15,7 @@ text-align: center;
 
 #banner {
     width:100%;
-    height:auto;
+    min-height: 30vh;
    display: block;
 }
 #h2-container {
@@ -67,7 +68,7 @@ width: 80%;
   
 }
 
-#arrow-container {
+#submit-btn {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -78,49 +79,48 @@ width: 80%;
     border-bottom-right-radius:50% ;
 }
 
-#arrow-container:hover {
+#submit-btn:hover {
     background-color: black;
     cursor: pointer;
 }
 
 #info {
-  margin: 0 auto;
+  position: absolute;
+  top: 70%;              /* adjust based on banner height */
+  left: 50%;
+  transform: translateX(-50%);
 
-    border: black solid 1px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    background-color: white;
-    max-width: 90%;
+  width: 90%;
+  max-width: 1000px;
+
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+  z-index: 10;
 }
 .card {
+    flex: 1;
   padding: 10px;
-  position: relative;
+  border-right: 1px solid gray;
 text-align: center;
 
 }
 
-
-.card:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 20%;
-  left:150%;
-  height: 60%;
-  width: 1px;
-  background: gray;
+.card:last-child {
+  border-right: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 968px) {
   body {
     align-items: flex-start; /* Aligns content to the top */
   }
 
   #info {
-    position: relative;
-    display:flex;
     flex-direction: column;
-    z-index: 3;
-    justify-content: center;
+    top: 25%;
+    gap: 1rem;
   }
 
   #banner {
