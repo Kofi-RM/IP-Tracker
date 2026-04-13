@@ -50,7 +50,14 @@ L.marker([lat, long]).addTo(map);
 }
 
 async function searchIp(searchIp) {
-     let response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_iQNiAqmMttP2ybQTj2MVnSvCwUDrA&ipAddress=${searchIp}`);
+let response;
+    if (isNaN(searchIp.replace(/\./g, ""))) {
+    response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_iQNiAqmMttP2ybQTj2MVnSvCwUDrA&domain=${searchIp}`);
+} else {
+    response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_iQNiAqmMttP2ybQTj2MVnSvCwUDrA&ipAddress=${searchIp}`);
+}
+
+
     let results = await response.json();
 
     console.log(results);
